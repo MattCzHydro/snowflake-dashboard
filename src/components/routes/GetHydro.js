@@ -117,7 +117,15 @@ export default withStyles(styles)(function GetHydro({ ein, classes }) {
       />
 
       <TransactionButton
+<<<<<<< HEAD
         readyText="Buy and Deposit Hydro"
+=======
+        readyText={
+          buyAmount <= 10000
+            ? "Buy and Deposit Hydro"
+            : "Maxiumum Request: 10,000 HYDRO"
+        }
+>>>>>>> 50ae16359aa344b75a484ad15b00036cfecf791f
         method={() =>
           uniswapWidgetContract.methods.swapAndDepositOutput(
             fromDecimal(buyAmount, 18),

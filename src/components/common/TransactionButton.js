@@ -1,5 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
 import classnames from "classnames";
+=======
+>>>>>>> 50ae16359aa344b75a484ad15b00036cfecf791f
 import { Button } from "@material-ui/core";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { withTheme, withStyles } from "@material-ui/core/styles";
@@ -50,7 +53,10 @@ function TransactionButton({
   onTransactionHash,
   onConfirmation,
   transactionOptions,
+<<<<<<< HEAD
   LabelProps,
+=======
+>>>>>>> 50ae16359aa344b75a484ad15b00036cfecf791f
   disabled
 }) {
   const context = useWeb3Context();
@@ -63,8 +69,11 @@ function TransactionButton({
     handlers: { transactionHash: onTransactionHash, receipt: onConfirmation },
     transactionOptions: transactionOptions
   });
+<<<<<<< HEAD
 
   console.log(transactionData);
+=======
+>>>>>>> 50ae16359aa344b75a484ad15b00036cfecf791f
 
   switch (transactionState) {
     case "ready":
@@ -73,7 +82,11 @@ function TransactionButton({
           style={show ? undefined : { display: "none" }}
           variant="contained"
           onClick={sendTransaction}
+<<<<<<< HEAD
           className={classnames(classes.ready, LabelProps)}
+=======
+          className={classes.ready}
+>>>>>>> 50ae16359aa344b75a484ad15b00036cfecf791f
           disabled={disabled}
         >
           {readyText}
@@ -149,8 +162,12 @@ TransactionButton.propTypes = {
   classes: PropTypes.object.isRequired,
   onTransactionHash: PropTypes.func,
   onConfirmation: PropTypes.func,
+<<<<<<< HEAD
   transactionOptions: PropTypes.object,
   LabelProps: PropTypes.string
+=======
+  transactionOptions: PropTypes.object
+>>>>>>> 50ae16359aa344b75a484ad15b00036cfecf791f
 };
 
 TransactionButton.defaultProps = {
